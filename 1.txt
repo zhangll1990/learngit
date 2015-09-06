@@ -2,3 +2,4 @@ yum install ca-certificates -y
 Git is a version control system.
 Git is free software.
 1123
+Git has a mutable index called stage.
