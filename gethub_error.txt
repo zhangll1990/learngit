@@ -1,0 +1,20 @@
+1.[root@localhost ~]# git push -u origin master
+The authenticity of host 'github.com (192.30.252.131)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.252.131' (RSA) to the list of known hosts.
+error: src refspec master does not match any.
+error: failed to push some refs to 'git@github.com:zhangll1990/learngit.git'
+
+错误解决办法是：
+1 ，cd 到自己 github 本地的版本库 
+2， 将本地GIT版本库PUSH到一个GITHUB上一个空的版本库时可能会出现如下错误
+error:src refspec master does not match any
+原因: 本地版本库为空, 空目录不能提交 (只进行了init, 没有add和commit)	
+
+2. [root@localhost ~]# git remote add origin git@github.com:zhangll1990/learngit.git
+fatal: Not a git repository (or any of the parent directories): .git
+
+远程推送报错：解决方法：
+1，cd 到对应版本库
+2，git init(做一次初始化)
